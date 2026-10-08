@@ -1,0 +1,12 @@
+{
+  "domain": "sony_str_da",
+  "name": "Sony STR-DA ES receiver",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://github.com/OWNER/sony-str-da3600es-ha",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/OWNER/sony-str-da3600es-ha/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sony STR-DA ES receiver",
+        "description": "Enter the address of the receiver. On the receiver, set Settings > Network > External Control to ON first.",
+        "data": {
+          "host": "Host or IP address",
+          "port": "Port"
+        },
+        "data_description": {
+          "port": "6001 for receivers from before 2012 (such as the STR-DA3600ES), 33335 for newer ones."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the receiver on that address and port.",
+      "external_control_disabled": "The receiver refuses commands. Set Settings > Network > External Control to ON on the receiver."
+    },
+    "abort": {
+      "already_configured": "This receiver is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Volume and sources",
+        "data": {
+          "min_db": "Volume at 0% of the slider",
+          "max_db": "Volume at 100% of the slider (never exceeded)",
+          "sources": "Extra sources"
+        },
+        "data_description": {
+          "sources": "One per line as Name=Code, with the code in hexadecimal, for example HDMI 1=1A. Select the input on the receiver and read its code from the input_code attribute of the media player."
+        }
+      }
+    },
+    "error": {
+      "invalid_sources": "Use one Name=Code per line, with the code in hexadecimal (00-FF).",
+      "invalid_range": "The volume at 0% must be lower than at 100%."
+    }
+  }
+}

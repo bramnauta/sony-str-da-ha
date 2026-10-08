@@ -1,0 +1,43 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Sony STR-DA ES-receiver",
+        "description": "Vul het adres van de receiver in. Zet op de receiver eerst Settings > Network > External Control op ON.",
+        "data": {
+          "host": "Host of IP-adres",
+          "port": "Poort"
+        },
+        "data_description": {
+          "port": "6001 voor receivers van vóór 2012 (zoals de STR-DA3600ES), 33335 voor nieuwere."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kan geen verbinding maken met de receiver op dit adres en deze poort.",
+      "external_control_disabled": "De receiver weigert commando's. Zet op de receiver Settings > Network > External Control op ON."
+    },
+    "abort": {
+      "already_configured": "Deze receiver is al ingesteld."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Volume en bronnen",
+        "data": {
+          "min_db": "Volume bij 0% van de schuif",
+          "max_db": "Volume bij 100% van de schuif (wordt nooit overschreden)",
+          "sources": "Extra bronnen"
+        },
+        "data_description": {
+          "sources": "Eén per regel als Naam=Code, met de code hexadecimaal, bijvoorbeeld HDMI 1=1A. Kies de ingang op de receiver en lees de code af uit het attribuut input_code van de mediaspeler."
+        }
+      }
+    },
+    "error": {
+      "invalid_sources": "Gebruik één Naam=Code per regel, met de code hexadecimaal (00-FF).",
+      "invalid_range": "Het volume bij 0% moet lager zijn dan bij 100%."
+    }
+  }
+}
